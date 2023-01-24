@@ -1,0 +1,210 @@
+/* la marge et la mise en forme du body*/
+body {
+        margin:  auto;
+        text-align: center;
+      }
+
+/* la mise en forme du header, aligne le text, et définir sa taille*/ 
+header {
+        padding-top: 20px;
+        padding: 0px;
+        color: white;
+        text-underline-position: black;
+        font-size: 30px;
+      }
+/* la mise en forme du titre dans le header */
+header h1{
+        margin: auto;
+        padding: 5%;
+}
+/* le nemu reste fixé*/
+nav{
+    position: sticky;
+    top: 0px;
+    }
+
+/* pour le formulaire du Quizz*/
+.form{
+        text-align: justify;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        padding : 5%;
+}
+ /* la mise en forme des paragraphes*/
+p{
+    text-align: justify;
+    background-color: white;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5em;
+}
+/* les liens restent en noir avant et apres la visite*/
+a {
+  text-decoration: none;
+  color : black;
+}
+ /* organiser la page entre la gauche et la droite*/
+.aside {
+     width  : 400px;
+     order:1;
+     padding: 50px;
+
+   }
+/* pour une position flex des composantes du menu*/
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* la mise en forme liste das les paragraphes (exemple dans le paragraphe institution)*/
+.p1{
+  text-align: justify;
+   margin-left: 2%;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5em;
+}
+
+/* la mise en forme de la gauche de la page*/
+.contenu{
+  width: 600px;
+  text-align:justify;
+    order:0;
+    padding: 0 50px;
+}
+/* la mise en forme des paragraphe comme institutions */
+.inst {
+  width: 1100px auto;
+  text-align:justify;
+    padding: 0 50px;
+}
+
+/* dissimuler le dropdown quand la fenetre fait plus de 800px */
+.dropdown{
+  display:  none;
+
+}
+
+/* pour organiser les horloge et le footer en flexbox*/ 
+.mulcadran{
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #198754; /*#308EE4*/;
+    color: white;
+    }
+/* sous divitions des divisions mulcadran */
+.cadran{
+      margin: 7px auto ;
+      border-left: solid white;
+      width:250px;
+    }
+
+/* la mise en forme du menu principale*/
+.menu_list{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: white;
+    border-bottom: solid 2px black;
+    font-family : Impact, Charcoal, sans-serif ;
+
+    margin: auto ;
+    padding-bottom: 0;
+    }
+
+/* les element de la liste*/
+.menu_list li{
+  font-weight: bold;
+  margin: 7px auto ;
+}
+/* organiser le menu quand la fenetre fait moins de 800px*/
+@media screen and (max-width: 800px){
+  .dropdown{
+    display:  block;
+    text-align: center;
+    background-color: white;
+    padding-top: : 15px;
+    margin-top: : 15px;
+  }
+
+  .menu_list {
+    position :absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+nav:hover .menu_list {
+  opacity: 1;
+  text-align: center;
+  width:100%;
+  margin:0;
+  padding:0
+
+}
+}
+
+/* surligner les éléments de la liste du menu quand la souris passe dessus*/
+.ni:hover  {
+    background-color:  #198754;
+    font-size: 20px;
+    color: white;
+}
+
+/*superposition du lien et de l'image dans le footer*/
+.parent{
+    width: 100%;
+    position: relative;
+    margin-bottom: 310px;
+
+}
+
+.bas {
+    position: absolute;
+    width: 100%;
+    background: black;
+}
+.quizz {
+    z-index: 1;
+    width: 200px;
+    height: 90px;
+    background: #8B0000;
+    color: white;
+    margin-top: 100px;
+    margin-left: 5px;
+    border:1px dotted black;
+    border-radius :  30px;
+    opacity: 0.9;
+}
+/*augmentation de l'opacité et la taille de "Quizz" quand on passe dessus*/
+.quizz:hover {
+  font-size: 17px;
+  opacity: 1;
+}
+
+/* changer la couleur de la bonde en bas*/
+.bonde{
+      background-color: #198754: 
+
+}
+/* eviter le chevauchement de la galerie et du footer*/
+footer {
+position: relative;
+
+}
+/* pour les boutons verts*/
+.cli {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
+
+/*les interlignes dans le formulaire de Quizz*/
+form{
+
+line-height: 2em;
+
+}

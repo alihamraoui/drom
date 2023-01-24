@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+   <head>
+    <script type="text/javascript" src="../js/drom.js"> </script>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <title>drom</title>
+  </head>
+
+<body onload = horloge() class = "gradient">
+
+  <header class="simple-ss">
+      <h1  style="border-bottom: solid ; width:500px ;"> Drom.fr </h1>
+  </header>
+
+    <nav>
+
+          <div class='dropdown'>
+              <svg width="60" height="50">
+                  <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                  <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                  <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+              </svg>
+          </div>
+           <ul class='menu_list' >
+            <li class="ni"> <a href='../Home.html' title='Home'>Home</a></li>
+            <li class="ni"> <a href='Gastronomie.html' title='Gastronomie'>Gastronomie </a></li>
+            <li class="ni"> <a href='Biodiversité.html' title='Biodiversité'>Biodiversité</a></li>
+            <li class="ni"> <a href='Espaces.html' title='Espace naturel'>Espace naturel</a></li>
+          </ul>
+
+    </nav>
+
+        <div id= 'horloge' class ="mulcadran" > </div>
+        <!-- quizz sous la forme d'un formulaire
+      constitué de 5 qustion -->
+        <form name = "quizz" action="Quizz.html" method="get" class = "form">
+          <!-- question 1 -->
+          <div>
+            <legend>En quelle année a été voté la loie faisant de la martinique, de la Réunion,<br> de la guadeloupe et de la guyane des département français ?</legend>
+            <input type="radio" id='1946' name='date' value='1946'/>
+            <label for="loie de mars 1946">1946 </label>
+            <input type="radio" id='1515' name='date' value='1515'/>
+            <label for="bataille de marignan">1515 </label>
+            <input type="radio" id='1848' name='date' value='1848'/>
+            <label for="abolition de l'esclavage">1848 </label>
+            <input type="radio" id='1789' name='date' value='1789'/>
+            <label for="révolution">1789 </label>
+          </div>
+          <!-- les réponse sont affiché après les questions correspondante après envoie du formulaire -->
+          <div id = "q1"> <br> </div>
+          <!-- question 2 -->
+          <div>
+            <legend>la(les) quelle(s) de ces colléctivité sont des départements d'outre mer?</legend>
+            <input type="checkbox" id='collectivite1' name="departement"
+            value='Martinique'/>
+            <label for="name_1"> Martinique </label>
+            <input type="checkbox" id='collectivite2' name="departement"
+            value='Nouvelle Calédonie'/>
+            <label for="name_2"> Nouvelle Calédonie </label>
+            <input type="checkbox" id='collectivite2' name="departement"
+            value='Auvergne'/>
+            <label for="name_3"> Auvergne </label>
+            <input type="checkbox" id='collectivite3' name="departement"
+            value='Mayotte'/>
+            <label for="name_4"> Mayotte </label>
+        </div>
+        <!-- réponse de la questions 2 -->
+        <div id = "q2"> <br> </div>
+        <!-- question 3 -->
+        <div>
+            <label for="navigateur">Dans quel Océan se situent la Martinique et la Guadeloupe?</label>
+            <select name='ocean' id='ocean'>
+            <option value = "p"> Le Pacifique </option>
+            <option value = "a"> l'Atlantique </option>
+            <option value = "au"> l'Océan Austral </option>
+            <option  value = "i"> l'Océan Indien </option>
+            </select>
+        </div>
+        <!-- reponse de la question 3 -->
+        <div id = "q3"> <br> </div>
+        <!-- question 4 -->
+        <div>
+          <legend>Le piton de la fournaise  est lun des volcans les plus actifs du monde et se situe à Mayotte :</legend>
+          <input type="radio" id='Vraie' name='fournaise' value='V'/>
+          <label for="Vrai">Vrai </label>
+          <input type="radio" id='Faux' name='fournaise' value='F'/>
+          <label for="Faux">Faux </label>
+        </div>
+        <!-- correction de la question 4 -->
+        <div id = "q4"> <br> </div>
+        <!-- question 5 -->
+        <div>
+            <label for='matoutou'>La matoutou et une espèce de migale innovensive mais où vit-t-elle ?</label>
+            <input type='text' id='matoutou' name="matoutou" size='8'/>
+        </div>
+        <div id = "q5"> <br> </div>
+        <div >
+            <input type="button" value = "envoyer les réponses" onclick="evaluation()" class="cli">
+            <button type="reset" class = "cli">Reset</button>
+        </div>
+          <!-- on affiche le nombre de réponses correctes -->
+          <div id = "quiz2z" ></div>
+      </form>
+
+    <!-- tois div pour nos cv, nous contacter par mail et afficher l'adresse postal -->
+    <footer >
+          <div class = mulcadran>
+            <div class = cadran>
+              <h2 >Nos CV </h2>
+              <a class="ni" href='ali.html' title='Ali CV' style="color: white">
+                 Ali Hamraoui
+              </a><br>
+              <a class="ni" href='abdel.html' title='Abdel CV' style="color: white">
+                Abdelmajid Omarjee
+              </a>
+            </div>
+              <div class = cadran>
+                  <h2>Contactez nous :</h2>
+                    <a class="ni" href='mailto:ali.hamraoui@etu.u-paris.fr' style="color: white">
+                      Ali Hamraoui
+                    </a><br>
+                    <a class="ni" href='mailto:abdelmajid.omarjee@etu.u-paris.fr' style="color: white">
+                       Abdelmajid Omarjee
+                  </a>
+              </div>
+            <div class = cadran>
+                  <h2>Adresse postal :</h2>
+                  12 rue théroigne de méricourt,<br>
+                  Paris, XIII ème arrondissement,<br>
+                  75013
+                  </a>
+            </div>
+    </footer>
+  </body>
+</html>

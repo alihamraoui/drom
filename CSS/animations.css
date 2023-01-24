@@ -1,0 +1,115 @@
+/*  Cette classe conserne l'animation du Background de notre header */
+      .simple-ss {
+        width: 100%;
+        height: 250px;
+        background-color: #eeeeee;
+        margin: auto;
+        background-image: url("../images/headerslide.gif");
+        animation-name: slide;
+        animation-duration: 10s;
+        animation-direction: normal;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+
+/* Nous avons défini un Un keyframe pour controler la progression de l'animation*/ 
+      @keyframes slide {
+         0% {
+          background-position: 0 0;
+        }
+        14.3% {
+          background-position: 0 0;
+        }
+        28.6% {
+          background-position: -1600px 0;
+        }
+        42.9% {
+          background-position: -1600px 0;
+        }
+        57.2% {
+          background-position: -3200px 0;
+        }
+        71.50% {
+          background-position: -3200px 0;
+        }
+        85.8% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+
+/* ################# Cette partie consacrée a la galerie des photos en bas des pages HTML*/
+      img {
+        max-width: 100%;
+      }
+      
+      /* cette classe controle la division principale de la galerie ( classe parent)*/
+      .slider-container {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        opacity:0.9;
+        background-color: black;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      /* cette classe permet de mettre une menu pour zapper les slide qui sera en dessus des slide*/
+      .menu {
+        position: absolute;
+        left: 0;
+        z-index: 900;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* cette partie est pour la mise en forme de menu dans la galerie (la marge entre les boutons et la tailles ..*/
+      .menu label {
+        cursor: pointer;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 50px;
+        margin: 0 0.2em 1em;
+      }
+
+      /*pour changer la couleur des boutons du menu une fois q'on passe dessus*/
+      .menu label:hover,
+      .menu label:focus {
+        background: #1c87c9;
+      }
+
+      /* la mise en forme des slides (la largeur , la hauteur et les marges)*/
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        padding: 8em 1em 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        transition: left 0s 0.75s;
+      }
+
+      /*définir le mode et le timing de la transition*/ 
+      [id^="slide"]:checked + .slide {
+        left: 0;
+        z-index: 100;
+        transition: left 0.65s ease-out;
+      }
+
+      /* le contenu des slies*/
+      .slide-1 {
+        background-image: url("../images/bas1.jpg");
+      }
+      .slide-2 {
+        background-image: url("../images/bas3.jpg");
+      }
+      .slide-3 {
+        background-image: url("../images/Gastronomie.jpeg");
+      }

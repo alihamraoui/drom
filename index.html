@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <script type="text/javascript" src="js/drom.js"> </script>
+    <meta charset='utf-8'>
+    <title>drom</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+  </head>
+<!-- appelle des fonction horloge pour afficher les heures et de reunion pour afficher l'île dans google maop -->
+<body onload = "horloge() ; reunion();" class = "gradient">
+
+  <header class="simple-ss">
+      <h1> Drom.fr </h1>
+  </header>
+
+       <nav>
+          <!--le drop down est cahcer quand la fenêtre et large de plus de 800 px  -->
+          <div class='dropdown'>
+              <svg width="60" height="50">
+                  <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                  <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                  <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+                  style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+              </svg>
+          </div>
+          <!-- liste menu caché par le dropdown quand la fen^tre est inférieure à 800 px -->
+          <ul class='menu_list' >
+            <li class="ni"> <a href='Home.html' title='Home'>Home</a></li>
+            <li class="ni"> <a href='HTML/Gastronomie.html' title='Gastronomie'>Gastronomie </a></li>
+            <li class="ni"> <a href='HTML/Biodiversité.html' title='Biodiversité'>Biodiversité</a></li>
+            <li class="ni"> <a href='HTML/Espaces.html' title='Espace naturel'>Espace naturel</a></li>
+          </ul>
+
+    </nav>
+        <!-- affichage des horloge -->
+        <!-- classe parente mulcadran classe cadran visible dans le css -->
+        <!-- ces deux classes gèrent les flex box des horloges et du footer -->
+        <div id= 'horloge' class ="mulcadran" > </div>
+
+        <div class="inst" >
+          <article>
+              <h1> DROM-COM </h1>
+                    <p>
+                    La France d'outre-mer comprend les territoires de la République éloignés de la France métropolitaine, située sur le continent européen. On parle également de DROM-COM (départements et régions d'outre-mer et collectivités d'outre-mer).
+                    </p>
+                    <p>
+                    Ces collectivités sont à la fois des départements (DOM) et des régions (ROM) d'outre-mer. Ce statut concerne <b> la Guadeloupe </b>, <b>la Guyane</b>, <b>la Martinique</b>, <b>Mayotte</b> et <b>La Réunion </b> : en Martinique, en Guyane et à Mayotte les compétences départementales et régionales sont exercées par des collectivités uniques alors qu'en Guadeloupe et la Réunion, les collectivités départementales et régionales existent simultanément. <br>
+                      <I> <FONT color="gray">(https://fr.wikipedia.org/wiki/Territoire_d%27outre-mer_(France))</FONT> </I>
+                     </p>
+
+                    <h1> Histoire</h1>
+                    <p>La mise en place de ce qui pourrait s'apparenter à des départements d'outre-mer a été faite après la conquête de la République de Venise en 1797, lorsque les îles Ioniennes (sous possession vénitienne) sont devenus françaises pendant le Directoire et ont été organisées comme les départements de Mer-Égée, d'Ithaque et de Corcyre. Cette tentative fut de courte durée, en 1798, l'amiral russe Fiodor Fiodorovitch Ouchakov expulsa les Français de ces îles et, bien que la France les recouvrât en 1807, les trois départements ne furent pas rétablis.
+                    </p>
+               </article>
+        </div>
+        <!-- boutons sur lesquels on appuie pour afficher les drom dans google map -->
+        <!-- un drom afficher à la fois géré avec le code javascript -->
+        <div class='main'>
+            <div class = 'aside'>
+              <tr style = "width:600px;">
+                <tl><input type="button" value = "Réunion" onclick="reunion()" class="cli"></tl>
+                <tl><input type="button" value = "Guadeloupe" onclick="guadeloupe()" class="cli"></tl>
+                <tl><input type="button" value = "Mayotte" onclick="mayotte()" class="cli"></tl>
+                <tl><input type="button" value = "Martinique" onclick="martinique()" class="cli"></tl>
+                <tl><input type="button" value = "Guyane" onclick="guyane()" class="cli"></tl>
+              </tr>
+              <tr><div id = "localisation"></div></tr>
+            </div>
+
+           <div class='contenu'>
+                <article>
+                    <p> À partir de 1920, Jean Ralaimongo (nationaliste malgache, membre dirigeant du mouvement national malgache Vy Vato Sakelika (V.V.S, « fer, pierre, Réseau »), président de la Ligue française pour l’accession des indigènes de Madagascar aux droits des citoyens français, et engagé volontaire pendant la Première Guerre mondiale) est le premier à réclamer le statut de département d'Outre-mer. Il a mené la campagne en faveur de l'égalité des droits pour les Malgaches. Il voulait voir Madagascar devenir une partie de la France et voyait la naturalisation de ses concitoyens comme une voie progressive à suivre. Réclamant « Madagascar département français », et pour tous les Malgaches la citoyenneté française au même titre que n'importe quelle personne née sur le territoire national2. </p>
+                    <p> Eu rebum dolorem invidunt eum, ei veniam voluptatum eos. Iuvaret     praesent quo ad. Ad omnium iriure mei, graece equidem petentium ne vim,     nullam aeterno intellegam nec et. Usu cu soluta apeirian, feugait iracundia     te mel. Per meliore euripidis reprehendunt ea, his et lucilius delicata.</p>
+                    <p>La Guadeloupe, la Martinique, la Guyane et La Réunion sont issues du premier empire colonial français : ces territoires sont colonisés par la France au cours du XVIIe siècle et deviennent des économies de plantation reposant principalement sur l'esclavage jusqu'à son abolition en 1848. Ce n'est qu'à l'issue de la Seconde Guerre mondiale, alors que le statut de l'empire colonial français évolue ; ces quatre anciennes colonies deviennent des départements par la loi du 19 mars 1946. Cette départementalisation signifie leur intégration complète à la République française puisque les lois et décrets appliqués en métropole y deviennent applicables, bien que des particularités subsistent3. Les gouverneurs coloniaux sont remplacés par des préfets dépendants du ministère de l'Intérieur. <br>
+                      <I> <FONT color="gray">(https://fr.wikipedia.org/wiki/Territoire_d%27outre-mer_(France))</FONT> </I>
+                    </p>
+                </article>
+
+            </div>
+        </div>
+        <div>
+        <article class=" inst">
+                    <h1> Institutions </h1>
+                    <p>Les institutions des départements et régions ultramarins sont globalement les mêmes que celles des départements et régions de métropole.
+                    L'État y est ainsi représenté par un préfet et le territoire est découpé en arrondissements et communes, ces dernières constituant le plus petit échelon des collectivités territoriales.</p>
+
+                    <p>Chaque DROM étant à la fois un département et une région, il dispose d'un conseil départemental et d'un conseil régional chargé chacun d'exercer les compétences de ces collectivités. Toutefois, l'article 73 de la Constitution prévoit qu'une collectivité territoriale unique peut se substituer à un département et une région d'outre-mer. Cette disposition s'applique à trois DROM sur cinq : </p>
+
+                    <p >
+                      <li class="p1"> Mayotte, dont le conseil départemental exerce également les compétences d'un conseil régional ; </li>
+                      <li class="p1" > la Guyane, dont l'Assemblée de Guyane exerce depuis décembre 2015 les compétences d'un conseil départemental et d'un conseil régional ; </li>
+                      <li class="p1"> la Martinique, dont l'Assemblée de Martinique exerce depuis décembre 2015 les compétences d'un conseil départemental et d'un conseil régional avec un conseil exécutif chargé du pouvoir exécutif.</li>
+
+                      <I> <FONT color="gray"> (https://fr.wikipedia.org/wiki/Territoire_d%27outre-mer_(France))</FONT> </I>
+                    </p>
+                </article>
+      </div>
+
+    <div class="parent">
+        <div class="bas">
+                       <!-- gere la galerie photo en bas la page  -->
+                      <div class="slider-container">
+                          <div class="menu">
+                                <label for="slide-dot-1"></label>
+                                <label for="slide-dot-2"></label>
+                                <label for="slide-dot-3"></label>
+                          </div>
+                               <input id="slide-dot-1" type="radio" name="slides" checked>
+                          <div class="slide slide-1"></div>
+                               <input id="slide-dot-2" type="radio" name="slides">
+                          <div class="slide slide-2"></div>
+                               <input id="slide-dot-3" type="radio" name="slides">
+                          <div class="slide slide-3"></div>
+                      </div>
+        </div>
+
+        <!-- superposition du lien cer le quizz sur la Galerie -->
+          <a href='HTML/Quizz.html' title='Super'>
+            <div class="bas quizz">
+                <h1> Quizz</h1>
+            </div>
+          </a>
+    </div>
+
+    <!-- tois div pour nos cv, nous contacter par mail et afficher l'adresse postal -->
+    <footer >
+          <div class = mulcadran>
+            <div class = cadran>
+              <h2 >Nos CV </h2>
+              <a class="ni" href='HTML/ali.html' title='Ali CV' style="color: white">
+                 Ali Hamraoui
+              </a><br>
+              <a class="ni" href='HTML/abdel.html' title='Abdel CV' style="color: white">
+                Abdelmajid Omarjee
+              </a>
+            </div>
+              <div class = cadran>
+                  <h2>Contactez nous :</h2>
+                    <a class="ni" href='mailto:ali.hamraoui@etu.u-paris.fr' style="color: white">
+                      Ali Hamraoui
+                    </a><br>
+                    <a class="ni" href='mailto:abdelmajid.omarjee@etu.u-paris.fr' style="color: white">
+                       Abdelmajid Omarjee
+                  </a>
+              </div>
+            <div class = cadran>
+                  <h2>Adresse postal :</h2>
+                  12 rue théroigne de méricourt,<br>
+                  Paris, XIII ème arrondissement,<br>
+                  75013
+                  </a>
+            </div>
+    </footer>
+  </body>
+</html>
